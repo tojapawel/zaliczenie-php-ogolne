@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+            id:
+            {{ zgloszenie.id }}<br/><br/>
+
+            kategoria:
+            {{ zgloszenie.getKategoria.nazwa }}<br/><br/>
+
+            dodane przez:
+            {{ zgloszenie.getDodanePrzez.email }}<br/><br/>
+
+            nazwa:
+            {{ zgloszenie.nazwa }}<br/><br/>
+
+            czas dodania:
+            {{ zgloszenie.getCzasDodania|date('Y-m-d H:i:s') }}<br/><br/>
+
+            opis:
+            {{ zgloszenie.opis }}<br/><br/>
+
+            status:
+            {{ zgloszenie.getStatus }}<br/><br/>
+
+{% endblock %}

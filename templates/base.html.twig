@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Test Application{% endblock %}</title>
+</head>
+<body>
+<div id="sidebar">
+    {% block sidebar %}
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/zgloszenia">Lista zgloszen (ADMIN)</a></li>
+            <li><a href="/nowezgloszenie">Dodaj zgloszenie (USER)</a></li>
+            <li><a href="/mojezgloszenia">moje zgloszenia (USER)</a></li>
+            <li><a href="/nowakategoria">Nowa kategoria (ADMIN)</a></li>
+            <li><a href="/login">Logowanie</a></li>
+            <li><a href="/register">Rejestracja</a></li>
+            <li><a href="/logout">Wyloguj sie</a></li>
+            {% block addons %}{% endblock %}
+        </ul>
+    {% endblock %}
+</div>
+
+<div id="content">
+    {% block body %}{% endblock %}
+</div>
+</body>
+</html>

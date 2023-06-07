@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    Wszystkie zgłoszenia
+<br/><br/>
+    {% for zgloszenie in zgloszenia %}
+        nazwa sgloszenia - <a href="/zgloszenie/{{zgloszenie.id}}">"{{zgloszenie.nazwa}}"</a>, status zgloszenia - "{{zgloszenie.status}}"<br/>
+    {% endfor %}
+
+{% endblock %}
